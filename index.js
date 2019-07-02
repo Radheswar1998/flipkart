@@ -6,7 +6,7 @@ var fkClient = new client({
     token:"34adf1305516462d8ce93de45594da81",
 },"json");
 app.get('/',function(req,res){
-	res.sendFile(__dirname +'/public/index.html')
+	res.sendFile(__dirname +'/index.html')
 })
 app.get('/search',function(req,res){
 	fkClient.doKeywordSearch(req.query.key,1).then(function(value){
